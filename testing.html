@@ -7,17 +7,20 @@
     <style>
        body{
         background-color: aliceblue;
+        margin: 0;
+        min-height: 100vh;
        }
        h1{
         font-size: 50px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         text-align: center;
         color: lightseagreen;
+        margin: 20px 0;
        }
        #navbar{
         background-color: mediumaquamarine;
         border-bottom: 2px solid blue;
-        padding: 10px 0;
+        padding: 20px 0;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
         position: sticky;
         top: 0;
@@ -32,10 +35,9 @@
         list-style-type: none;
        }
        .nav-links > li > a {
+        text-decoration: none;
         color: blue;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        padding: 8px 15px;
-        padding: 20px;
         font-size: 18px;
         color: blue;
         transition: all 0.3s ease-in-out;
@@ -44,6 +46,8 @@
        .nav-links > li > a:hover {
         background-color: blue;
         color: aquamarine;
+        padding: 5px 10px;
+        border-radius: 5px;
         transform: scale(1.1);
        }
        #text {
@@ -51,13 +55,17 @@
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         text-align: center;
        }
+       .hero{
+        text-align: center;
+        margin: 30px auto;
+        padding: 20px;
+       }
        
        #button {
-        text-align: center;
-        font-size: 16px;
-        padding: 10px;
-        width: auto;
-        border-radius: 15px;
+        font-size: 18px;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 30px;
         background-color: mediumaquamarine;
         color: darkblue;
         transition: all 0.3s ease-in-out;
@@ -67,19 +75,58 @@
         background-color: darkblue;
         cursor: pointer;
         transform: scale(1.1);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 4px 8px rgba(125, 165, 216, 0.329);
        }
        .hero-section {
         display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
         justify-content: center;
-        margin: 10px auto;
+        margin: 30px auto;
        }
        #card {
         border: px solid blue;
         padding: 40px;
         margin: 0 10px;
-        width: 500px;
+        width: 250px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+       }
+       footer {
+        text-align: center;
+        background-color: mediumaquamarine;
+        padding: 20px;
+        color: darkblue;
+       }
+       footer ul {
+        list-style-type: none;
+        padding: 0;
+       }
+       footer ul li {
+        display: inline-block;
+        margin: 0 10px;
+       }
+       footer ul li a {
+        color: darkblue;
+        text-decoration: none;
+        font-weight: bold;
+       }
+       footer ul li a:hover {
+        text-decoration: underline;
+       }
+       footer button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: darkblue;
+        color: aquamarine;
+        cursor: pointer;
+        transition:  all 0.3s ease-in-out;
+       }
+       footer button:hover {
+        background-color: aquamarine;
+        color: darkblue;
+        transform: scale(1.05);
        }
     </style>
 </head>
@@ -105,7 +152,17 @@
         <div id="card">Backend Dude!!! WTF</div>
         <div id="card">Skillful and spellbinding in web dev</div>
     </section>
-    <p>Tackling each idea brings me closer to mastery of Web Dev. MWAHAHAHAHAHAHAHA!!!!</p>
-    <p>yall out there should help me!!!</p>
+
+    <footer>
+            <p>Contact us: <a href="mailto:info@yourcompany.com">info@webdevsuper.com</a></p>
+            <p>Follow us:</p>
+            <ul>
+                <li><a href="https://facebook.com/yourpage">Facebook</a></li>
+                <li><a href="https://twitter.com/yourhandle">Twitter</a></li>
+                <li><a href="https://linkedin.com/in/yourprofile">LinkedIn</a></li>
+            </ul>
+            <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Back to Top</button>
+                        <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+        </footer>
 </body>
 </html>
