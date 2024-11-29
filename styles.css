@@ -1,0 +1,138 @@
+body {
+    font-family: "Host Grotesk",
+        serif;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: aliceblue;
+}
+
+/*branding*/
+#branding {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: mediumblue;
+}
+#branding .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+.social-links {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+}
+.social-links li a {
+    color: midnightblue;
+    text-decoration: none;
+}
+
+/*image slider*/
+#image-slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 500px;
+}
+#image-slider .slider img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+}
+
+/*Services*/
+#services {
+    padding: 40px;
+    text-align: center;
+}
+
+#services h2 {
+    margin-bottom: 20px;
+}
+
+/*testimonials*/
+#testimonials {
+    padding: 40px;
+}
+#testimonials h2 {
+    text-align: center;
+}
+.testimonials {
+    margin-bottom: 20px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+.testimonials span {
+    display: block;
+    margin-top: 10px;
+    font-style: italic;
+    color: gray;
+}
+/*booking section*/
+#booking {
+    padding: 40px;
+    text-align: center;
+}
+#booking form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+#booking form input, #booking form textarea, #booking form button {
+    padding: 10px;
+    font-size: 16px;
+}
+#booking form button {
+    background-color: darkcyan;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+#booking form button:hover {
+    background-color: white;
+    color: darkcyan;
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+}
+/*footer*/
+footer {
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Responsive Design*/ 
+@media (max-width: 768px) {
+    #branding {
+        flex-direction: column;
+        align-items: center;
+    }
+    #image-slider {
+        height: 300px;
+    }
+    #booking form {
+        width: 90%;
+    }
+    .testimonials {
+        padding: 10px;
+    }
+    .social-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
